@@ -34,7 +34,7 @@ apt upgrade
 
 cd /usr/sbin
 
-usermod -aG sudo <your username>
+usermod -aG sudo yourusername
 
  
 Use a text editor of your choice to edit the .bshrc. I like micro. If you don't, no worries, you can use anyother. Does not matter which one (nano, vim whatever).
