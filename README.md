@@ -28,57 +28,86 @@ of the box unless you manually added them manually to the .bashrc).
 
 So first of all, to fix the user problem, in your terminal of choice do:-
 
-su ## to go into root. enter the password for root (hopefully you gave it a password and didn't disable it)
+su
 
 apt upgrade
+
 cd /usr/sbin
+
 usermod -aG sudo <your username>
 
+ 
 Use a text editor of your choice to edit the .bshrc. I like micro. If you don't, no worries, you can use anyother. Does not matter which one (nano, vim whatever).
 
-sudo apt install micro ## to get micro if you want to use it.
+ 
+sudo apt install micro  
 
 cd ~
 micro .bashrc 
 
+ 
 Add these lines to the end of it :-
 
 export PATH=$PATH:/usr/local/sbin
  
 export PATH=$PATH:/usr/sbin
 
-exit out of micro with ctrl + q and press y to write out the changes (esc + shift + colon then type wq in vim).
+ 
+Exit out of micro with ctrl + q and press y to write out the changes (esc + shift + colon then type wq in vim).
+ 
 reboot now 
+ 
  
 Debian only will allow you to run commands like that with sudo in the front if you are not in root
 
+ 
 If that doesn't work
+ 
 cd /usr/sbin
+ 
 ./reboot now
 
 Now this should be fine.
 
+ 
 In order to have no compile errors while you compile your i3 environment, the following dependencies are required:-
+ 
 picom
+ 
 feh 
+ 
 rofi 
+ 
 git
+ 
 kitty
 
+ 
 You can install all of i3 manually like this(to avoid any possibly missing packages)
+ 
 suckless-tools
+ 
 i3lock
+ 
 i3status
+ 
 dunst
+ 
 i3-wm 
 
 Optonal dependencies (recommended to install because i have them already):-
+ 
 kupfer
+ 
 lxappearnce
+ 
 lightdm
+ 
 nitrogen
 
+ 
 It is important that the files got to the correct directories. There are many places I use directories or programs in the dot files that simply would not exist in your specific install.
+ 
 So edit them to fit your specific machine
 
 Example (not really because it is a problem) - key words like /home/debian have been used while referencing directories and files. To fix this specififc problem,
@@ -87,43 +116,61 @@ replace this with ~ or $HOME
 To get the following files:-
 
 git clone https://github.com/shadows1003929/i3-dotfiles.git
+ 
 cd i3-dotfiles
 
 Now you have the files that are in the i3-dotfiles folder and you are in it. Make the changes to patch it (because there are most likely problems with it).
 
 Now, do the following (make sure you are in the i3-dotfiles directory):-
+ 
 mkdir ~/.config/i3status && mkdir ~/.config/dunst ## if you already do not have the i3status and dunst directories. To check if they already exist, do - 
+ 
 cd ~/.config/
+ 
 ls
 
 After checking or creating the directories do the following :-
   
 cd ~/i3-dotfiles
+ 
 sudo mv config-i3 config
+ 
 sudo rm -rf ~/.config/i3/config
+ 
 sudo mv config ~/.config/i3/
+ 
 sudo mv config-i3status config
+ 
 sudo rm -rf ~/.config/i3status/config/
+ 
 sudo mv config ~/.config/i3status/
+ 
 sudo mv dunstrc ~/.config/dunst/
+ 
 sudo mv compton.conf ~/.config/
 
 Now everything should be fine
 
+ 
 If you want to use lightdm:-
+ 
 sudo apt install lightdm
 
 It will prompt you to use it or not. Select lightdm.
 
+ 
 Now press the keys $mod + shift + r ($mod is the one modifier key you set. mod1 = alt, mod4 = win key/ command key on macs(i think))
+ 
 If there are compile errors, fix them
 
+ 
 This step is needed to ensure that your i3 config file is not messed up because if it was and we directly rebooted, well, consider it screwed unless you are lucky.
 Also, always reload your i3 after making changes to the config file. If i3 acts wonky while saying there are no errors, you can try to fix the culprit that you
 think is causing the problem and then you can reboot (i have experienced situation like that, don't worry, it ain't the end of the world).
 
 Now you can reboot
 
+ 
 Hopefully it works!
 
 
