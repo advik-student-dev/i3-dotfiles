@@ -14,7 +14,7 @@ His files :- https://github.com/addy-dclxvi/i3-starterpack
 
 The first video in the guide series - https://www.youtube.com/watch?v=j1I63wGcvU4
 
-Go through this first if you do not know anything about this stuff. This will help you a lot in learning how to troubleshoot and how i3 config editing works in general.
+Go through them first if you do not know anything about this stuff. This will help you a lot in learning how to troubleshoot and how i3 config editing works in general.
 
 I also installed kde with the graphical debian installer to get stuff doing in a virtual machine (virtualbox was the application used on a macOS Monterey host). 
 So if you want to just make this work (and are doing this for the first time and do not have experience), do that.
