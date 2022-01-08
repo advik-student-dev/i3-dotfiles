@@ -81,10 +81,8 @@ rofi
  
 git
  
-kitty
-
  
-You can install all of i3 manually like this(to avoid any possibly missing packages)
+You can install all of i3 manually like this(to avoid any possibly missing packages) :-
  
 suckless-tools
  
@@ -95,6 +93,9 @@ i3status
 dunst
  
 i3-wm 
+
+kitty (my conf file is here and you can use it)
+
 
 Optonal dependencies (recommended to install because i have them already):-
  
