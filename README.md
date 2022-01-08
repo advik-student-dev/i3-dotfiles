@@ -115,7 +115,7 @@ So edit them to fit your specific machine
 Example (not really because it is a problem) - key words like /home/debian have been used while referencing directories and files. To fix this specififc problem,
 replace this with ~ or $HOME
 
-To get the following files:-
+To get the files:-
 
 git clone https://github.com/shadows1003929/i3-dotfiles.git
 
