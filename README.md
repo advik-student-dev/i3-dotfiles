@@ -37,12 +37,13 @@ cd /usr/sbin
 usermod -aG sudo yourusername
 
  
-Use a text editor of your choice to edit the .bshrc. I like micro. If you don't, no worries, you can use anyother. Does not matter which one (nano, vim whatever).
+Use a text editor of your choice to edit the .bashrc. I like micro. If you don't, no worries, you can use anyother. Does not matter which one (nano, vim whatever).
 
  
 sudo apt install micro  
 
 cd ~
+
 micro .bashrc 
 
  
@@ -51,9 +52,9 @@ Add these lines to the end of it :-
 export PATH=$PATH:/usr/local/sbin
  
 export PATH=$PATH:/usr/sbin
-
  
 Exit out of micro with ctrl + q and press y to write out the changes (esc + shift + colon then type wq in vim).
+
  
 reboot now 
  
