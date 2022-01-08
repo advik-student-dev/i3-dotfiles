@@ -40,15 +40,17 @@ sudo apt install micro ## to get micro if you want to use it.
 cd ~
 micro .bashrc 
 
-  Add these lines to the end of it
+Add these lines to the end of it
 
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/sbin
 
-## exit out of micro with ctrl + q and press y to write out the changes (esc + shift + colon then type wq in vim).
-reboot now ## debian only will allow you to run commands like that with sudo in the front if you are not in root
+exit out of micro with ctrl + q and press y to write out the changes (esc + shift + colon then type wq in vim).
+reboot now 
+ 
+Debian only will allow you to run commands like that with sudo in the front if you are not in root
 
-## if that doesn't work
+If that doesn't work
 cd /usr/sbin
 ./reboot now
 
@@ -72,6 +74,7 @@ Optonal dependencies (recommended to install because i have them already):-
 kupfer
 lxappearnce
 lightdm
+nitrogen
 
 It is important that the files got to the correct directories. There are many places I use directories or programs in the dot files that simply would not exist in your specific install.
 So edit them to fit your specific machine
@@ -91,7 +94,8 @@ mkdir ~/.config/i3status && mkdir ~/.config/dunst ## if you already do not have 
 cd ~/.config/
 ls
 
-## After checking or creating the directories do the following :-
+After checking or creating the directories do the following :-
+  
 cd ~/i3-dotfiles
 sudo mv config-i3 config
 sudo rm -rf ~/.config/i3/config
@@ -107,7 +111,7 @@ Now everything should be fine
 If you want to use lightdm:-
 sudo apt install lightdm
 
-##It will prompt you to use it or not. Select lightdm.
+It will prompt you to use it or not. Select lightdm.
 
 Now press the keys $mod + shift + r ($mod is the one modifier key you set. mod1 = alt, mod4 = win key/ command key on macs(i think))
 If there are compile errors, fix them
