@@ -46,7 +46,7 @@ cd ~
 
 micro .bashrc 
 
- 
+
 Add these lines to the end of it :-
 
 export PATH=$PATH:/usr/local/sbin
@@ -55,13 +55,13 @@ export PATH=$PATH:/usr/sbin
  
 Exit out of micro with ctrl + q and press y to write out the changes (esc + shift + colon then type wq in vim).
 
- 
+
 reboot now 
- 
- 
+
+
 Debian only will allow you to run commands like that with sudo in the front if you are not in root
 
- 
+
 If that doesn't work
  
 cd /usr/sbin
@@ -70,7 +70,7 @@ cd /usr/sbin
 
 Now this should be fine.
 
- 
+
 In order to have no compile errors while you compile your i3 environment, the following dependencies are required:-
  
 picom
@@ -81,7 +81,7 @@ rofi
  
 git
  
- 
+
 You can install all of i3 manually like this(to avoid any possibly missing packages) :-
  
 suckless-tools
@@ -98,7 +98,7 @@ kitty (my conf file is here and you can use it)
 
 
 Optonal dependencies (recommended to install because i have them already):-
- 
+
 kupfer
  
 lxappearnce
@@ -107,7 +107,7 @@ lightdm
  
 nitrogen
 
- 
+
 It is important that the files got to the correct directories. There are many places I use directories or programs in the dot files that simply would not exist in your specific install.
  
 So edit them to fit your specific machine
@@ -118,54 +118,54 @@ replace this with ~ or $HOME
 To get the following files:-
 
 git clone https://github.com/shadows1003929/i3-dotfiles.git
- 
+
 cd i3-dotfiles
 
 Now you have the files that are in the i3-dotfiles folder and you are in it. Make the changes to patch it (because there are most likely problems with it).
 
 Now, do the following (make sure you are in the i3-dotfiles directory):-
- 
+
 mkdir ~/.config/i3status && mkdir ~/.config/dunst ## if you already do not have the i3status and dunst directories. To check if they already exist, do - 
- 
+
 cd ~/.config/
- 
+
 ls
 
 After checking or creating the directories do the following :-
-  
+ 
 cd ~/i3-dotfiles
- 
+
 sudo mv config-i3 config
- 
+
 sudo rm -rf ~/.config/i3/config
- 
+
 sudo mv config ~/.config/i3/
- 
+
 sudo mv config-i3status config
- 
+
 sudo rm -rf ~/.config/i3status/config/
- 
+
 sudo mv config ~/.config/i3status/
- 
+
 sudo mv dunstrc ~/.config/dunst/
- 
+
 sudo mv compton.conf ~/.config/
 
 Now everything should be fine
 
- 
+
 If you want to use lightdm:-
  
 sudo apt install lightdm
 
 It will prompt you to use it or not. Select lightdm.
 
- 
+
 Now press the keys $mod + shift + r ($mod is the one modifier key you set. mod1 = alt, mod4 = win key/ command key on macs(i think))
  
 If there are compile errors, fix them
 
- 
+
 This step is needed to ensure that your i3 config file is not messed up because if it was and we directly rebooted, well, consider it screwed unless you are lucky.
 Also, always reload your i3 after making changes to the config file. If i3 acts wonky while saying there are no errors, you can try to fix the culprit that you
 think is causing the problem and then you can reboot (i have experienced situation like that, don't worry, it ain't the end of the world).
