@@ -29,6 +29,7 @@ of the box unless you manually added them manually to the .bashrc).
 So first of all, to fix the user problem, in your terminal of choice do:-
 
 su ## to go into root. enter the password for root (hopefully you gave it a password and didn't disable it)
+
 apt upgrade
 cd /usr/sbin
 usermod -aG sudo <your username>
@@ -40,9 +41,10 @@ sudo apt install micro ## to get micro if you want to use it.
 cd ~
 micro .bashrc 
 
-Add these lines to the end of it
+Add these lines to the end of it :-
 
 export PATH=$PATH:/usr/local/sbin
+ 
 export PATH=$PATH:/usr/sbin
 
 exit out of micro with ctrl + q and press y to write out the changes (esc + shift + colon then type wq in vim).
