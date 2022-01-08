@@ -33,13 +33,14 @@ apt upgrade
 cd /usr/sbin
 usermod -aG sudo <your username>
 
-## use a text editor of your choice to edit the .bshrc. I like micro. If you don't, no worries, you can use anyother. Does not matter which one (nano, vim whatever).
+Use a text editor of your choice to edit the .bshrc. I like micro. If you don't, no worries, you can use anyother. Does not matter which one (nano, vim whatever).
 
 sudo apt install micro ## to get micro if you want to use it.
 
 cd ~
 micro .bashrc 
-## Add these lines to the end of it
+
+  Add these lines to the end of it
 
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/sbin
